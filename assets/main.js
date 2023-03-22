@@ -4,3 +4,15 @@
 // va applicato uno sconto del 20% per i minorenni
 // va applicato uno sconto del 40% per gli over 65.
 // L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). 
+
+function conferma(){
+
+    let chilometri = document.getElementById('chilometri').value;
+    const anni = document.getElementById('eta');
+
+    let prezzo = chilometri * 0.21;
+
+    document.writeln(`<p> Ciao, il prezzo del tuo biglietto è di: ${prezzo}€</p>`)
+
+
+}
