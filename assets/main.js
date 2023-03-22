@@ -8,11 +8,29 @@
 function conferma(){
 
     let chilometri = document.getElementById('chilometri').value;
-    const anni = document.getElementById('eta');
+    let eta = parseInt(document.getElementById('eta').value);
+    
 
     let prezzo = chilometri * 0.21;
 
-    document.writeln(`<p> Ciao, il prezzo del tuo biglietto è di: ${prezzo}€</p>`)
+    let prezzoMinori = prezzo - ( prezzo * 0.20 );
 
+    let prezzoAnziani = prezzo - ( prezzo * 0.40);
+
+    console.log(eta);
+
+    if( eta < 18 ){
+
+        document.writeln(`<p> Ciao, il prezzo del tuo biglietto è di: ${prezzoMinori.toFixed(2)}€</p>`)
+
+    }
+    else if ( eta > 65 ){
+
+        document.writeln(`<p> Ciao, il prezzo del tuo biglietto è di: ${prezzoAnziani.toFixed(2)}€</p>`)
+
+    }
+    else{
+        document.writeln(`<p> Ciao, il prezzo del tuo biglietto è di: ${prezzo}€</p>`)
+    }
 
 }
